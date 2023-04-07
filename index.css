@@ -1,0 +1,641 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Shantell Sans', cursive;*/
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff;
+}
+
+/*-----------------------------------------------nav bar-------------------------------------------------*/
+
+.navbar {
+    background-color: rgb(37, 37, 37);
+    padding: 10px 35px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.menubar .menulogo {
+    display: none;
+}
+
+.navbar ul {
+    list-style-type: none;
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 65px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* company logo */
+.navbar img {
+    width: 50px;
+}
+
+/*-----------------------------------------Home part-------------------------------------------------------*/
+
+#home {
+    position: relative;
+    background-color: #000;
+    height: 980px;
+    overflow: hidden;
+}
+
+/* burger image  */
+#home .burger_main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ketchup image  */
+#home .ketchup_dip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-130%, -190%) rotate(-20deg);
+}
+
+@keyframes floating1 {
+    0% {
+        transform: translate(0%, 0%);
+    }
+
+    50% {
+        transform: translate(0%, -7%);
+    }
+
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+
+#home .ketchup_dip img {
+    width: 320px;
+    animation: floating1 4s ease-in-out infinite;
+}
+
+/* lettuce image */
+#home .lettuce {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-15%, 10%) rotate(90deg);
+}
+
+@keyframes floating2 {
+    0% {
+        transform: translate(0%, 0%);
+    }
+
+    50% {
+        transform: translate(-10%, 0%);
+    }
+
+    100% {
+        transform: translate(0%, 0%);
+    }
+}
+
+#home .lettuce img {
+    width: 400px;
+    animation: floating2 5s ease-in-out infinite;
+}
+
+/* text in home part */
+#home .text1,
+#home .text1 span,
+#home .text2,
+#home .text2 span {
+    display: inline-block;
+    font-family: 'Monoton', cursive;
+    color: #fff;
+    letter-spacing: 1.2px;
+    word-spacing: 15px;
+}
+
+#home .text1 {
+    margin-top: 250px;
+    margin-left: 190px;
+    font-size: 70px;
+    text-align: right;
+}
+
+#home .text2 {
+    margin-top: 230px;
+    margin-left: 430px;
+    font-size: 80px;
+    text-align: right;
+}
+
+/* fries image */
+#home .fries {
+    position: absolute;
+    top: 40%;
+    left: -15%;
+    background-color: #fff;
+    border-radius: 30% 70% 57% 43% / 30% 30% 70% 70%;
+    overflow: visible;
+}
+
+@keyframes transfer {
+    0% {
+        transform: translateX(0px);
+    }
+
+    50% {
+        transform: translate(20px);
+    }
+
+    100% {
+        transform: translate(0px);
+    }
+}
+
+#home .fries img {
+    transform: rotateY(180deg);
+    margin-left: 120px;
+    animation: transfer 5s ease-in-out infinite;
+}
+
+/* coke image */
+#home .coke {
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    background-color: #fff;
+    border-radius: 30% 70% 57% 43% / 30% 30% 70% 70%;
+    overflow: visible;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#home .coke img {
+    width: 200px;
+    animation: rotate 5s ease-in-out infinite;
+}
+
+
+/*------------------------------------------Menu part------------------------------------------------------*/
+
+#ourmenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* welcome message container */
+#ourmenu .welcome {
+    width: 85%;
+    margin-top: 110px;
+    color: #b04d00;
+    font-family: 'Shantell Sans';
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* "burger raja" part of the welcome text */
+#ourmenu .welcome span {
+    display: inline-block;
+    margin: 30px;
+    color: #c95700;
+    font-family: 'Monoton', cursive;
+    font-size: 50px;
+    word-spacing: 10px;
+    letter-spacing: 5.2px;
+    font-weight: normal;
+    text-shadow: 1px 1px 10px #ff6f00;
+}
+
+/* container div */
+#ourmenu .container {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    margin: 60px 0px 70px 0px;
+}
+
+/* header part */
+#ourmenu .container .header div {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    color: #ff6f00;
+    font-family: cursive;
+    font-size: 50px;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+/* image in header part */
+#ourmenu .container .header img {
+    width: 500px;
+    outline: 5px solid #d65d00;
+    outline-style: double;
+    outline-offset: 10px;
+}
+
+/* menuitems div */
+#ourmenu .container .menuitems {
+    width: 60%;
+    margin: 100px 0px;
+    background-color: rgba(170, 170, 170, 0.5);
+    border-radius: 20px;
+    position: relative;
+}
+
+/* previous and next button of scroll bar */
+#ourmenu .container .menuitems .prev,
+#ourmenu .container .menuitems .next {
+    position: absolute;
+    top: 40%;
+    /* padding: 20px 20px; */
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: rgba(173, 64, 0, 0.48) 0px 2px 25px 0px;
+    z-index: 1;
+}
+
+#ourmenu .container .menuitems .prev {
+    left: -1.5%;
+    padding: 20px 15px 15px 15px;
+}
+
+#ourmenu .container .menuitems .next {
+    right: -1.5%;
+    padding: 20px 15px 15px 15px;
+    transform: rotate(180deg);
+}
+
+/* menu items begins */
+#ourmenu .container .menuitems ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 100px 40px 40px 40px;
+    overflow-x: hidden;
+}
+
+#ourmenu .container .menuitems ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 5px solid rgba(233, 232, 232, 0.6);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 1.2s;
+    position: relative;
+    user-select: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 50px -20px, rgba(0, 0, 0, 0.3) 0px 30px 20px -30px;
+}
+
+/* image div for items image */
+#ourmenu .container .menuitems ul li .photo {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: -40%;
+    transition: 1s;
+}
+
+#ourmenu .container .menuitems ul li:hover .photo {
+    transform: translateY(7px);
+}
+
+#ourmenu .container .menuitems ul li .photo img {
+    width: 100px;
+}
+
+/* name div for item's name */
+#ourmenu .container .menuitems ul li .name {
+    width: 200px;
+    margin-top: 60px;
+    color: #b04d00;
+    text-align: center;
+    text-transform: capitalize;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* price div for item's price */
+#ourmenu .container .menuitems ul li .price {
+    margin: 20px 0px;
+    padding: 10px 25px;
+    background-color: #71b300;
+    color: #fff;
+    border-radius: 15px;
+    transition: 1s;
+    box-shadow: 0px 12px 24px rgba(2, 30, 84, .2);
+}
+
+#ourmenu .container .menuitems ul li:hover .price {
+    transform: translateY(-4px);
+}
+
+/*----------------------------------------------Services part--------------------------------------------------*/
+
+#service {
+    background-image: url('images/shop_photo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+/* heading part */
+#service .heading {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-family: cursive;
+    font-size: 80px;
+    text-transform: uppercase;
+    letter-spacing: 5.2px;
+}
+
+/* services list  */
+#service .services {
+    width: 60%;
+    margin: 60px auto;
+}
+
+#service .services ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 90px 20px;
+}
+
+#service .services ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+    border: 3px solid #fff;
+    position: relative;
+    padding-top: 15px;
+    border-radius: 10px;
+    transition: 1s;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#service .services ul li:hover {
+    transform: translateY(-15px);
+    box-shadow: 0px 12px 24px rgba(255, 94, 0, 0.7);
+}
+
+/* name of service */
+#service .services ul li .discription {
+    color: #fff;
+    font-family: 'Shantell Sans', cursive;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+
+/* icons of that services */
+#service .services ul li .image {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 65%;
+    left: 35%;
+    background-color: rgb(255, 94, 0);
+    border: 3px solid #fff;
+    transition: 1s;
+}
+
+#service .services ul li:hover .image {
+    transform: translateY(20px);
+    box-shadow: 0px 12px 24px rgba(255, 94, 0, 0.9);
+}
+
+#service .services ul li .image img {
+    width: 65px;
+}
+
+
+/*------------------------------------------About us part------------------------------------------------------*/
+
+#aboutus {
+    padding: 100px 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+/* company's logo div */
+#aboutus .logo {
+    width: fit-content;
+    height: fit-content;
+}
+
+/* content div */
+.content {
+    padding: 30px 50px;
+}
+
+/* about us title */
+.content .title {
+    margin-bottom: 30px;
+    color: #b04d00;
+    font-family: 'Shantell Sans', cursive;
+    font-size: 70px;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* text in about us */
+.content .text {
+    text-align: justify;
+}
+
+@media screen and (max-width: 380px) {}
+
+@media screen and (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .menubar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menubar .menulogo {
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column-reverse;
+        row-gap: 20px;
+        /* display: flex; */
+        margin-bottom: 20px;
+    }
+
+    .tempdisplay {
+        display: none !important;
+    }
+
+
+    #home {
+        height: 600px;
+    }
+
+    #home .burger_main img {
+        width: 350px !important;
+    }
+
+    #home .ketchup_dip {
+        transform: translate(-130%, -160%) rotate(-20deg);
+    }
+
+    #home .ketchup_dip img {
+        width: 150px !important;
+
+    }
+
+    #home .lettuce {
+        transform: translate(-15%, 10%) rotate(90deg);
+    }
+
+    #home .lettuce img {
+        width: 180px !important;
+    }
+
+    #home .text1 {
+        margin-top: 250px;
+        margin-left: 40px;
+        font-size: 25px;
+    }
+
+    #home .text2 {
+        font-size: 40px;
+        margin-top: 230px;
+        margin-left: 200px;
+    }
+
+    #home .fries {
+        bottom: -20px;
+        top: 65%;
+    }
+
+    #home .fries img {
+        width: 200px !important;
+    }
+
+    #home .coke {
+        top: 13%;
+    }
+
+    #home .coke img {
+        width: 100px;
+    }
+    #ourmenu .welcome{
+        font-size: 20px;
+    }
+    #ourmenu .welcome span{
+        font-size: 30px;
+    }
+    #ourmenu .container{
+        flex-direction: column;
+    }
+    #ourmenu .container .header div{
+        margin-bottom: 0px;
+    }
+    #ourmenu .container .header img{
+        display: none;
+    }
+    #ourmenu .container .menuitems{
+        width: 90%;
+        margin: 30px auto;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    #aboutus {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    #aboutus .logo {
+        margin: 0 auto;
+    }
+
+    #aboutus .logo img {
+        width: 300px;
+    }
+
+    .content .title {
+        font-size: 30px;
+    }
+
+    .content .text {}
+}
